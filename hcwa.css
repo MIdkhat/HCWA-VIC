@@ -1,0 +1,49 @@
+		#map {
+		height: 100%;
+		position: relative;
+		}
+
+		#select-options {
+		position: absolute;
+		padding: 5px;
+		top: 60px;
+		right: 10px;
+		width: 300px;
+		background-color: white;
+		font-family: Arial, Helvetica, sans-serif;
+		}
+		/* Optional: Makes the sample page fill the window. */
+		html, body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		}
+
+		output {
+		display: block;
+		margin-top: 4em;
+		font-family: monospace;
+		font-size: .8em;
+		}
+
+		#distance-filter {
+			margin-top: 10px;
+		}
+
+		#autocomplete {
+			width: 290px;
+			margin-bottom: 5px
+		}
+
+		#distance-select{
+			width: 190px;
+			margin-right: 10px
+		}
+
+		#distance-submit{
+			width: 90px;
+		}
+		
+		.label {
+			font-family: "Roboto";
+		}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Place Details</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	
+<!-- jQuery UI CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+	
+<!-- jQuery Modal -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+<!--Fontawesome CDN-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<!-- Google Fonts -->
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+
+<link type="text/css" rel="stylesheet" href="hcwa.css">
+
+</head>
+<body>
+<div id="map">
+</div>
+<div id="select-options">
+	<div id="service-select">
+	 <!-- service select checkboxes wil go here -->
+	</div>
+	<!-- Your address form -->
+	<form id="distance-filter" method="post">
+		<fieldset>
+			<input type="text" id="autocomplete" placeholdere="Start typing address.."/>
+			<br>
+			<select name="distance" id="distance-select">
+				<option value="10000">All</option>
+				<option value="5">Within 5 km</option>
+				<option value="10">Within 10 km</option>
+				<option value="20">Within 20 km</option>
+				<option value="50">Within 50 km</option>
+			</select>
+			<button type='button' id="distance-submit">find</button> 
+			<button type='button' id="show-results">show selected results</button> 
+		</fieldset>
+	</form>
+</div>
+<div id="results" class="overlay">
+	<a href="#" class="close-button"></a>
+	<a href="" id="print"><i class="fa fa-print"></i>Print</a>
+	<div class="overlay-content">
+		<!-- List will go here -->
+	</div>
+</div>	
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="hcwa-list-formatted-google-correct.js" ></script>
+<script src="hcwa.js" ></script>
+
+<script async defer	src="https://maps.googleapis.com/maps/api/js?key=<YOUR-API-KEY>&libraries=places,geometry&callback=initMap"></script>
+
+</body>
+</html>
